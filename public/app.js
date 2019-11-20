@@ -17,6 +17,7 @@ axios.get(`/items`)
 document.getElementById(`submit`).addEventListener(`click`, e => {
   e.preventDefault()
 
+
   let item = document.getElementById(`newItem`).value
 
   const newitem = {
@@ -24,7 +25,7 @@ document.getElementById(`submit`).addEventListener(`click`, e => {
     isDone: false
   }
 
-  document.getElementById(`newItem`).value = ``
+  document.getElementById(`itemInput`).value = ``
 
   axios.post(`/todo`, newitem)
     .then(() => {
