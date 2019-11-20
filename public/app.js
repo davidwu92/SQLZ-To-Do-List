@@ -1,11 +1,12 @@
 //Displaying the to do list
-axios.get(`/items`)
+axios.get(`/todos`)
   .then(({ data }) => {
-    data.foreach(item => {
+    console.log(data)
+    data.forEach(item => {
       let itemElem = document.createElement(`tr`)
       itemElem.innerHTML = `
-          <p>${item.title}
-          <button class="deleteItem" data-title = "${item.title}">x</button>
+          <p>${item.task}
+          <button class="deleteItem" data-title = "${item.task}">x</button>
           </p>
           `
       document.getElementById(`tbody`).append(itemElem)
@@ -17,14 +18,14 @@ axios.get(`/items`)
 document.getElementById(`submit`).addEventListener(`click`, e => {
   e.preventDefault()
 
-  let item = document.getElementById(`newItem`).value
+  let item = document.getElementById(`itemInput`).value
 
   const newitem = {
     task: item,
     isDone: false
   }
 
-  document.getElementById(`newItem`).value = ``
+  document.getElementById(`itemInput`).value = ``
 
   axios.post(`/todo`, newitem)
     .then(() => {
@@ -42,10 +43,12 @@ document.getElementById(`submit`).addEventListener(`click`, e => {
 
 //Delete item off the list
 document.addEventListener(`click `, e => {
-  if (event.target.className === `deleteItem`) {
-    axios.delete(`/items/${event.target.dataset.title}`)
+  if (e.target.className === `deleteItem`) {
+        
+    axios.delete(`/todo/${e.target.dataset.title}`)
       .then(() => {
-        event.target.parentNode.parentNode.remove()
+        console.log(e.target.parentNode)
+        e.target.parentNode.parentNode.remove()
       })
   }
 })

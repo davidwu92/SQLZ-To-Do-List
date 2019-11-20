@@ -37,7 +37,7 @@ app.put('/todo/:id', (req, res) => {
 // delete Todo
 app.delete('/todo/:id', (req, res) => {
   Todo.findOne({
-    where: { id: parstInt(req.params.id) }
+    where: { id: parseInt(req.params.id) }
   })
     .then(todo => todo.destroy())
     .then(() => res.sendStatus(200))
