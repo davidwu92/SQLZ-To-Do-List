@@ -17,14 +17,14 @@ axios.get(`/items`)
 document.getElementById(`submit`).addEventListener(`click`, e => {
   e.preventDefault()
 
-  let newItem = document.getElementById(`newItem`).value
+  let newItem = document.getElementById(`itemInput`).value
 
   const newitem = {
     title: `newItem`,
     done: false
   }
 
-  document.getElementById(`newItem`).value = ``
+  document.getElementById(`itemInput`).value = ``
 
   axios.post(`/items`, newitem)
     .then(() => {
