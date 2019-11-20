@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap Styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+  <title>To Do List</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="card mt-5">
+      <div class="card-header text-center">
+        <h1 class="display-2 text-info">To Do List</h1>
+      </div>
+
+      <div class="card-body">
+        <h3 class="card-title">Add A New Item</h3>
+
+        <!-- Form to add a new item to the list -->
+        <form>
+          <div class="form-group">
+            <label for="itemInput">Item</label>
+            <input type="text" class="form-control" id="itemInput" placeholder="item">
+          </div>
+
+          <button id="submit" type="submit" class="btn btn-info">Add Item</button>
+        </form>
+
+      </div>
+      <div class="card-footer"></div>
+      <br>
+    </div>
+
+    <!-- Table to Display current list -->
+    <table class="table table-hover mt-5">
+      <thead>
+        <tr>
+          <th class="col-10" scope="col">Item</th>
+          <th class="col-2" scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+  <script src="./app.js"></script>
+  <!-- Axios -->
+  <script src=“https://unpkg.com/axios/dist/axios.min.js“> </script> 
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
