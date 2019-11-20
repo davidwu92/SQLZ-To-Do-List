@@ -4,6 +4,7 @@ module.exports = app => {
   // get all Todo
   app.get('/todos', (req, res) => {
     // able to get the data from mySQL
+    
     Todo.findAll()
       .then(todos => {
         // express gives us the simple data that we are looking for
@@ -15,7 +16,8 @@ module.exports = app => {
 
 //  add Todo
 app.post('/todo', (req, res) => {
-  Actor.create(req.body)
+  console.log(req.body)
+  Todo.create(req.body)
     .then(() => {
       res.sendStatus(200)
     })
