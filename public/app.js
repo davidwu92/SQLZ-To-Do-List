@@ -17,16 +17,17 @@ axios.get(`/items`)
 document.getElementById(`submit`).addEventListener(`click`, e => {
   e.preventDefault()
 
-  let newItem = document.getElementById(`itemInput`).value
+
+  let item = document.getElementById(`newItem`).value
 
   const newitem = {
-    title: `newItem`,
-    done: false
+    task: item,
+    isDone: false
   }
 
   document.getElementById(`itemInput`).value = ``
 
-  axios.post(`/items`, newitem)
+  axios.post(`/todo`, newitem)
     .then(() => {
       let itemElem = document.createElement(`tr`)
       itemElem.innerHTML = `
