@@ -1,0 +1,26 @@
+{
+  "name": "SQLZ-To-Do-List",
+  "version": "1.0.0",
+  "description": "To Do list with sequelize",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidwu92/SQLZ-To-Do-List.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidwu92/SQLZ-To-Do-List/issues"
+  },
+  "homepage": "https://github.com/davidwu92/SQLZ-To-Do-List#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.0.1",
+    "sequelize": "^5.21.2"
+  }
+}
