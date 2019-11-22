@@ -16,7 +16,6 @@ module.exports = app => {
 
 //  add Todo
 app.post('/todo', (req, res) => {
-  console.log(req.body)
   Todo.create(req.body)
     .then(() => {
       res.sendStatus(200)
