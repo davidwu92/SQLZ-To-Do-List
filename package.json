@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/davidwu92/SQLZ-To-Do-List#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mysql2": "^2.0.1",
     "sequelize": "^5.21.2"
   }
